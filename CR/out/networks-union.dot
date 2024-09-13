@@ -1,0 +1,25 @@
+digraph "" {
+HDAC3 [color=orangered, fillcolor=orangered, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+STAT3 [color=black, fillcolor=white, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+STAT1 [color=orangered, fillcolor=orangered, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+SOCS2 [color=orangered, fillcolor=orangered, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+SMAD1 [color=lightblue, fillcolor=lightblue, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+KIT [color=olivedrab3, fillcolor=olivedrab3, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+AKT1 [color=orangered, fillcolor=orangered, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+"gate-1" [color=black, fillcolor=black, fixedsize=True, fontname=Helvetica, fontsize=18, gate=True, height="0.2", label=".", shape=ellipse, style="filled, bold", width="0.2"];
+TP53 [color=orangered, fillcolor=orangered, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+TSC2 [color=lightblue, fillcolor=lightblue, fontname=Helvetica, fontsize=18, shape=ellipse, style="filled, bold"];
+HDAC3 -> SMAD1  [arrowhead=tee, color=red, dir=forward, key=0, penwidth="5.0", sign="-1", weight="1.0"];
+STAT3 -> "gate-1"  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="3.333333333333333", sign=1, weight="0.6666666666666666"];
+STAT3 -> SOCS2  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="5.0", sign=1, weight="1.0"];
+STAT1 -> AKT1  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="1.6666666666666665", sign=1, weight="0.3333333333333333"];
+STAT1 -> TP53  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="1.6666666666666665", sign=1, weight="0.3333333333333333"];
+STAT1 -> "gate-1"  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="3.333333333333333", sign=1, weight="0.6666666666666666"];
+SOCS2 -> STAT1  [arrowhead=tee, color=red, dir=forward, key=0, penwidth="5.0", sign="-1", weight="1.0"];
+KIT -> STAT3  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="5.0", sign=1, weight="1.0"];
+AKT1 -> TP53  [arrowhead=tee, color=red, dir=forward, key=0, penwidth="5.0", sign="-1", weight="1.0"];
+AKT1 -> TSC2  [arrowhead=tee, color=red, dir=forward, key=0, penwidth="1.6666666666666665", sign="-1", weight="0.3333333333333333"];
+"gate-1" -> AKT1  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="3.333333333333333", sign=1, weight="0.6666666666666666"];
+TP53 -> HDAC3  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="5.0", sign=1, weight="1.0"];
+TP53 -> TSC2  [arrowhead=normal, color=forestgreen, dir=forward, key=0, penwidth="3.333333333333333", sign=1, weight="0.6666666666666666"];
+}

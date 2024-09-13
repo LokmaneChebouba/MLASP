@@ -1,0 +1,9 @@
+mapping,frequency,inclusive,exclusive
+TSC2<-TP53,1.0,,
+STAT3<-KIT,1.0,,
+STAT1<-!SOCS2,1.0,,
+CDK4<-ATF3,1.0,,
+CDKN2A<-CCND1,1.0,,
+TP53<-STAT1,1.0,,
+CCND1<-!CDK4,1.0,,
+SOCS2<-STAT3,1.0,,
